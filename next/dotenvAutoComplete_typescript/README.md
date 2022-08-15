@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/259'>[Next] 환경 변수(.env) 타입을 설정하여 자동 완성 사용하기</a>
