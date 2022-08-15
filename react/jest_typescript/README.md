@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/252'>[React] 타입 스크립트(TypeScript) 환경에서 Jest를 이용하여 테스트하기</a>
