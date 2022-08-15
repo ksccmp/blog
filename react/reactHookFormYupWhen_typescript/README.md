@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/280'>[React] 사용해본 yup 조건절 정리</a>
