@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 const App = () => {
     // let myNumber: number = '23'; // 정의된 타입에 맞는 데이터가 아니어서 에러 발생
