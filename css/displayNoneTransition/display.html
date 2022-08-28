@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container { 
+            transition: .3s ease-out;   
+        }
+
+        #title {
+            cursor: pointer;
+        }
+
+        .remove {
+            display: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle</button>
+    <div id="container">
+        <h2 id="title">This is Display</h2>
+    </div>
+</body>
+<script>
+    const toggleButton = document.querySelector('#toggleButton');
+    toggleButton.addEventListener('click', () => {
+        const container = document.querySelector('#container');
+        if(container.getAttribute('class', 'remove')) {
+            container.removeAttribute('class', 'remove');
+        } else {
+            container.setAttribute('class', 'remove');
+        }
+    })
+</script>
+</html>
