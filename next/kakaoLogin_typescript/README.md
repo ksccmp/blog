@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/237'>[Next] 카카오 로그인 구현하기</a>
