@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        #wrapper {
+            border: 1px solid #c2c5cb;
+
+            display: inline-block;
+            padding: 8px 12px;
+        }
+
+        #label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            cursor: pointer;
+        }
+
+        #hiddenCheckbox {
+            display: none;
+        }
+
+        #hiddenCheckbox:checked + #showCheckbox {
+            background: url("https://blog.kakaocdn.net/dn/p2kpN/btrL4lwWrqf/KqNevAyZKWsoCB5ijL9qcK/img.png") no-repeat;
+            background-size: contain;
+        }
+
+        #showCheckbox {
+            width: 20px;
+            height: 20px;
+
+            background: url("https://blog.kakaocdn.net/dn/bjVlZ3/btrL5bHw92G/bg8CBmi4x6zklkecdJ1dpk/img.png") no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <label id="label">
+            <input id="hiddenCheckbox" type="checkbox" />
+            <div id="showCheckbox"></div>
+            <span>체크해보세요.</span>
+        </label>
+    </div>
+</body>
+</html>
