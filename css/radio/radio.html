@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        #wrapper {
+            border: 1px solid #c2c5cb;
+
+            padding: 8px 12px;
+
+            display: inline-block;
+        }
+
+        #labelSection {
+            display: flex;
+            gap: 16px;
+        }
+
+        #label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            cursor: pointer;
+        }
+
+        #hiddenRadio {
+            display: none;
+        }
+
+        #hiddenRadio:checked + #showRadio {
+            background: url("https://blog.kakaocdn.net/dn/Ji1vo/btrMkSh73bz/hyAlzPvGYeD73LefS4ANB1/img.png") no-repeat;
+            background-size: contain;
+        }
+
+        #showRadio {
+            width: 20px;
+            height: 20px;
+
+            background: url("https://blog.kakaocdn.net/dn/LAusM/btrMrxQ8kW2/KUj97kbGvSI8RvwK5Kjqak/img.png") no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <section id="labelSection">
+            <label id="label">
+                <input id="hiddenRadio" name="radio" type="radio" />
+                <div id="showRadio"></div>
+                <span>(A) 체크해보세요.</span>
+            </label>
+    
+            <label id="label">
+                <input id="hiddenRadio" name="radio" type="radio" />
+                <div id="showRadio"></div>
+                <span>(B) 체크해보세요.</span>
+            </label>
+        </section>
+    </div>
+</body>
+</html>
