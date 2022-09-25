@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/287'>[SpringBoot] QueryDSL에서 상수값 사용하기</a>
