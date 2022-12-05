@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/302'>[SpringBoot] AWS Lambda로 배치 만들기 (1) - Spring 세팅 및 로컬 테스트</a>
