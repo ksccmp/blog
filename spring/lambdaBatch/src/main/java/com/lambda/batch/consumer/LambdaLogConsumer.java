@@ -22,7 +22,6 @@ public class LambdaLogConsumer implements Consumer<Object> {
     @Override
     public void accept(Object o) {
         List<LambdaLogEntity> lambdalLogEntityList = Arrays.asList(
-                new LambdaLogEntity(0, o.toString(), LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))),
                 new LambdaLogEntity(0, "yyyyMMddHHmmss pattern", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))),
                 new LambdaLogEntity(0, "yyyyMMdd pattern", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))
         );
