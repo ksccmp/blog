@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/305'>[SpringBoot] encodeURIComponent, decodeURIComponent 사용하기</a>
