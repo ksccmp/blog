@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            padding: 8px 12px;
+        }
+
+        #button {
+            width: 86px;
+            height: 34px;
+        }
+
+        #linear-gradient-box {
+            width: 200px;
+            height: 86px;
+
+            transition: 2s ease-out;
+        }
+
+        .linear-gradient-box_color {
+            background: linear-gradient(
+                to bottom,
+                rgb(34, 37, 41),
+                rgb(151, 74, 221),
+                rgb(255, 255, 255)
+            );
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <button id="button">색상 toggle</button>
+        <div id="linear-gradient-box"></div>
+    </div>
+</body>
+<script>
+    const button = document.querySelector('#button');
+    button.addEventListener('click', () => {
+        const linearGradientBox = document.querySelector('#linear-gradient-box');
+
+        // 색상 class가 있는 경우
+        if(linearGradientBox.classList.contains('linear-gradient-box_color')) {
+            linearGradientBox.classList.remove('linear-gradient-box_color'); // class 삭제
+        } 
+        
+        // 색상 class가 없는 경우
+        else {
+            linearGradientBox.classList.add('linear-gradient-box_color'); // class 추가
+        }
+    })
+</script>
+</html>
