@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/309'>[SpringBoot] QueryDSL where절에 1=1 사용하기</a>
