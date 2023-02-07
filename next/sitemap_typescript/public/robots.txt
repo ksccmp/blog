@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /exclude
+
+# Host
+Host: http://localhost:8088
+
+# Sitemaps
+Sitemap: http://localhost:8088/sitemap.xml
+Sitemap: http://localhost:8088/sitemap/product-sitemap.xml

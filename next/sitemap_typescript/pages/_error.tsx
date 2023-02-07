@@ -5,7 +5,7 @@ interface IError {
     statusCode: number;
 }
 
-const Error: React.FC<IError> = ({ statusCode }) => {
+const Error: React.FC<IError> = ({ statusCode }): JSX.Element => {
     return (
         <div>
             에러 발생 시 나오는 페이지 <br /> {statusCode}
