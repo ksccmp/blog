@@ -1,11 +1,11 @@
-import * as React from 'react'
+import React from 'react';
 import { GetServerSideProps } from 'next';
 
-interface IError {
+interface Error {
     statusCode: number;
 }
 
-const Error: React.FC<IError> = ({ statusCode }) => {
+const Error = ({ statusCode }: Error) => {
     return (
         <div>
             에러 발생 시 나오는 페이지 <br /> {statusCode}
