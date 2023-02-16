@@ -6,7 +6,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         const res = await axios.get('http://localhost:8080/product/no');
         const productNos: number[] = res.data;
 
-        // query → context.query.[productNo]
+        // query → context.query.productNo
         // pathname → context.resolvedUrl
         // cache → context.res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
 

@@ -16,7 +16,7 @@ public class ProductController {
 
     @GetMapping("/product/no")
     public ResponseEntity<Object> productNo() {
-        List<Integer> productNos = Arrays.asList(new Integer[]{1, 2, 3, 4, 5, 6});
+        List<Integer> productNos = Arrays.asList(new Integer[]{1, 2, 3, 4, 5, 6, 7});
         return ResponseEntity.ok(productNos);
     }
 
@@ -26,7 +26,7 @@ public class ProductController {
 
         switch (productNo) {
             case 1: {
-                map.put("name", "revalidation 첫번째 상품");
+                map.put("name", "변경된 첫번째 상품");
                 map.put("price", 3200);
                 map.put("stock", 58);
                 break;
