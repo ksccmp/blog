@@ -10,6 +10,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
             props: {
                 productNos,
             },
+            revalidate: 10,
         };
     } catch (error) {
         return {
