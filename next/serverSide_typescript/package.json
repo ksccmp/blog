@@ -15,11 +15,13 @@
     "next": "^12.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-query": "^3.39.3",
     "swr": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^17.0.5",
     "@types/react": "^17.0.38",
+    "@types/react-query": "^1.2.9",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "eslint": "^8.34.0",

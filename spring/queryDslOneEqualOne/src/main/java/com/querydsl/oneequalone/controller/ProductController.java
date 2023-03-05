@@ -29,7 +29,7 @@ public class ProductController {
 
         switch (productNo) {
             case 1: {
-                map.put("name", "변경된 첫번째 상품");
+                map.put("name", "첫번째 상품");
                 map.put("price", 3200);
                 map.put("stock", 58);
                 break;
