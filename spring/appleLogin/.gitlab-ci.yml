@@ -1,0 +1,47 @@
+stages:
+  - build
+  - package
+  - deploy
+
+variables:
+  IMAGE_NAME: $CI_REGISTRY_IMAGE/spring-img
+  CONTAINER_NAME: spring-con
+
+build:
+  image: gradle:jdk11
+  stage: build
+  script:
+    - gradle wrap
+    - ./gradlew clean
+    - ./gradlew assemble
+  artifacts:
+    paths:
+      - build/libs/*.jar
+    expire_in: 1 days
+
+package:
+  image: docker:latest
+  stage: package
+  services:
+    - docker:dind
+  before_script:
+    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  script:
+    - docker build -t $IMAGE_NAME .
+    - docker push $IMAGE_NAME
+  after_script:
+    - docker logout
+
+deploy:
+  stage: deploy
+  tags:
+    - api
+  before_script:
+    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  script:
+    - docker rm -f $CONTAINER_NAME || true
+    - docker rmi $IMAGE_NAME || true
+    - docker pull $IMAGE_NAME
+    - docker run --name $CONTAINER_NAME -p 8080:8080 --restart always -d $IMAGE_NAME
+  after_script:
+    - docker logout
