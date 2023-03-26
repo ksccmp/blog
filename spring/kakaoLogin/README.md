@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/321'>[Next] Kakao 로그인 Spring을 활용하여 구현하기</a>
