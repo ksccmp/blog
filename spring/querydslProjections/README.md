@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/273'>[SpringBoot] QueryDSL Projections로 결과값 핸들링하기</a>
