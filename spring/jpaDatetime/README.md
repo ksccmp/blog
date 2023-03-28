@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/257'>[JPA] 자동으로 Datetime 설정하기</a>
