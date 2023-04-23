@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/326'>[React] Cypress API 요청 기다리기</a>
