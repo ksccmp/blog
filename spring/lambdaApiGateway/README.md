@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/328'>[SpringBoot] AWS Lambda와 API Gateway로 Serverless 구성하기 (1) - Spring 세팅 및 로컬 테스트</a>
