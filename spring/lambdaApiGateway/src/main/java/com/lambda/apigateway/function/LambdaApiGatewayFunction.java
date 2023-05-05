@@ -1,13 +1,13 @@
 package com.lambda.apigateway.function;
 
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -22,8 +22,14 @@ public class LambdaApiGatewayFunction implements Function<APIGatewayProxyRequest
 
         List<String> strings = new ArrayList<>();
 
-        if(StringUtils.hasText(apiGatewayProxyRequestEvent.getBody())) {
-            Map<String, Object> map = new ObjectMapper().convertValue(apiGatewayProxyRequestEvent.getBody(), Map.class);
+        if (StringUtils.hasText(apiGatewayProxyRequestEvent.getBody())) {
+            Map<String, Object> map;
+            try {
+                map = new ObjectMapper().readValue(apiGatewayProxyRequestEvent.getBody(), Map.class);
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
+
             strings.add(map.get("title").toString());
             strings.add(map.get("name").toString());
         }
