@@ -1,0 +1,75 @@
+# 실행될 stage 지정 (위에서 아래로 차례대로 실행)
+stages:
+  - build
+  - package
+  - deploy
+
+variables:
+  S3_BUCKET_NAME: j4j-lambda-apigateway-bucket
+  S3_OBJECT_NAME: lambdaApiGateway-0.0.1-SNAPSHOT-aws.jar
+  LAMBDA_NAME: apigateway-lambda
+
+build:  # JOB 이름
+  # 사용될 이미지 설정
+  image: gradle:7.6.1-jdk11
+  # stage 설정
+  stage: build
+  # 실행될 script 설정
+  script:
+    - chmod +x gradlew
+    - ./gradlew build
+  # artifacts 설정 (bulld를 통해 생성된 파일을 job artifacts에 보관하여 다음에 수행되는 JOB에서 가져다 활용할 수 있게 도와줌)
+  artifacts:
+    # 보관이 이루어질 경로 설정
+    paths:
+      - build/libs/*-aws.jar
+    # 유효기간 설정
+    expire_in: 1 days
+  # JOB이 수행될 branch 설정 (설정된 branch에 push가 발생될 시 JOB 수행)
+  only:
+    - master
+
+package:  # JOB 이름
+  # 사용될 이미지 설정
+  image: docker:latest
+  # stage 설정
+  stage: package
+  # service 설정 (설정한 image가 작업이 이루어지는 동안 실행되는 docker 이미지)
+  services:
+    - docker:dind
+  # 실행될 script 설정
+  script:
+    - apk add --no-cache curl jq python3 py3-pip
+    - pip install awscli
+    - aws s3 cp build/libs/*-aws.jar s3://$S3_BUCKET_NAME/$S3_OBJECT_NAME
+  # JOB이 수행될 branch 설정 (설정된 branch에 push가 발생될 시 JOB 수행)
+  only:
+    - master
+
+deploy:  # JOB 이름
+  # 사용될 이미지 설정
+  image: docker:latest
+  # stage 설정
+  stage: deploy
+  # service 설정 (설정한 image가 작업이 이루어지는 동안 실행되는 docker 이미지)
+  services:
+    - docker:dind
+  # 실행될 script 설정
+  script:
+    - apk add --no-cache curl jq python3 py3-pip
+    - pip install awscli
+    - aws configure set region ap-northeast-2
+    - aws lambda update-function-code
+      --function-name $LAMBDA_NAME
+      --s3-bucket $S3_BUCKET_NAME
+      --s3-key $S3_OBJECT_NAME
+    - aws lambda update-function-configuration
+      --function-name $LAMBDA_NAME
+      --runtime java11
+      --handler com.lambda.apigateway.handler.LambdaApiGatewayHandler
+      --memory-size 512
+      --timeout 120
+      --environment "Variables={MAIN_CLASS=com.lambda.apigateway.LambdaApiGatewayApplication, TZ=Asia/Seoul}"
+  # JOB이 수행될 branch 설정 (설정된 branch에 push가 발생될 시 JOB 수행)
+  only:
+    - master
