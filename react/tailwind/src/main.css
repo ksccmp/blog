@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* adding base style */
+@layer base {
+    p {
+        /* 모든 p에 font-family: font-serif, box-sizing: border-box, margin: 0, padding: 0 적용 */
+        @apply font-serif box-border m-0 p-0;
+    }
+
+    div {
+        /* 모든 div에 box-sizing: border-box, margin: 0, padding: 0 적용 */
+        @apply box-border m-0 p-0;
+    }
+}
+
+/* adding components classes */
+@layer components {
+    .modal--outer {
+        /* 일반 css 사용 */
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        background-color: #a9a9a9;
+
+        /* tailwind theme 사용 - 1 */
+        height: theme('height.60');
+
+        /* tailwind theme 사용 - 2 */
+        @apply rounded-lg;
+    }
+
+    .modal--inner {
+        /* 일반 css 사용 */
+        background-color: #ffffff;
+        text-align: center;
+        width: 12.5rem;
+    }
+}
+
+/* adding utilities */
+@layer utilities {
+    .my-utility-color-1 {
+        background-color: olive;
+    }
+
+    .my-utility-color-2 {
+        background-color: aqua;
+    }
+
+    .modal--inner {
+        @apply bg-cyan-300;
+    }
+}
