@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'NotoSansKr';
+    src: url('/fonts/NotoSansKR-Medium.otf') format('opentype'); /* url경로는 public아래 경로를 적용 */
+    font-weight: normal;
+    font-style: normal;
+}
