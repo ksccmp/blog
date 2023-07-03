@@ -1,0 +1,16 @@
+{
+    "presets": [
+        "@babel/preset-react" // babel 설정이 안되어 있는 경우 추가
+    ],
+
+    "plugins": [
+        [
+          "react-remove-properties", {
+            "properties": [
+              "data-cy", // data-cy 속성 제거
+              "data-testid" // data-testid 속성 제거
+            ]
+          }
+        ]
+    ]
+}
