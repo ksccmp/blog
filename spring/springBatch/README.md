@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/353'>[SpringBoot] SpringBatch 사용하기 (1) - Scheduler를 이용하여 Tasklet, Chunk 배치 만들기</a>
