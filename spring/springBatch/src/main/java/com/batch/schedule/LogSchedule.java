@@ -22,22 +22,24 @@ public class LogSchedule {
     private final LogRegisterJobConfig logRegisterJobConfig;
     private final LogUpdateJobConfig logUpdateJobConfig;
 
-    @Scheduled(cron = "0/10 * * * * ?") // 10초마다 Job 실행, cron 표현식 활용 (초 분 시 일 월 요일)
-    public void logRegister() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
-        jobLauncher.run(
-                logRegisterJobConfig.logRegisterJob(),
-                new JobParametersBuilder()
-                        .addLong("time", new Date().getTime()) // parameter를 매번 달리하여 동일한 job이어도 스케줄 설정에 맞게 반복되어 실행되도록 설정
-                        .toJobParameters()
-        );
-    }
+//    @Scheduled(cron = "0/10 * * * * ?") // 10초마다 Job 실행, cron 표현식 활용 (초 분 시 일 월 요일)
+//    public void logRegister() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
+//        jobLauncher.run(
+//                logRegisterJobConfig.logRegisterJob(),
+//                new JobParametersBuilder()
+//                        .addString("contents", "parameterContents") // 파라미터 추가
+//                        .addLong("time", new Date().getTime()) // parameter를 매번 달리하여 동일한 job이어도 스케줄 설정에 맞게 반복되어 실행되도록 설정
+//                        .toJobParameters()
+//        );
+//    }
 
     @Scheduled(fixedRate = 20000) // 메서드가 실행된 시간부터 20초마다 Job 실행
     public void logUpdate() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
         jobLauncher.run(
                 logUpdateJobConfig.logUpdateJob(),
                 new JobParametersBuilder()
-                        .addLong("time", new Date().getTime()) // parameter를 매번 달리하여 동일한 job이어도 스케줄 설정에 맞게 반복되어 실행되도록 설정
+                        .addString("contents", "parameterUpdateContents") // 파라미터 추가
+                        .addLong("time", new Date().getTime()) // 파라미터를 매번 달리하여 동일한 job이어도 스케줄 설정에 맞게 반복되어 실행되도록 설정
                         .toJobParameters()
         );
     }

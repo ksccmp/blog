@@ -17,6 +17,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 
 @Configuration
 @RequiredArgsConstructor
@@ -61,11 +62,14 @@ public class LogRegisterJobConfig {
     @Bean
     public Tasklet contentsLogRegisterTasklet() {
         return (contribution, chunkContext) -> {
+            // StepContext에서 JobParameter 가져오기
+            Map<String, Object> jobParameters = chunkContext.getStepContext().getJobParameters();
+
             // 로그 데이터 적재
             logJpaRepository.save(
                     LogEntity
                             .builder()
-                            .contents("contentsLogRegisterTasklet")
+                            .contents(jobParameters.get("contents").toString()) // 파라미터에서 전달받은 값으로 변경
                             .build()
             );
 
@@ -113,5 +117,3 @@ public class LogRegisterJobConfig {
         };
     }
 }
-
-// JobParameters jobParameters = contribution.getStepExecution().getJobParameters();

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -14,6 +15,7 @@ import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.builder.JpaPagingItemReaderBuilder;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -51,7 +53,7 @@ public class LogUpdateJobConfig {
         return new StepBuilder("logUpdateStep", jobRepository)
                 .<LogEntity, LogEntity>chunk(20, transactionManager) // transaction 처리를 20개 단위씩 묶어 처리, Generic은 <reader에서 넘겨주는 객체, writer로 넘겨줄 객체>
                 .reader(logUpdateItemReader())
-                .processor(logUpdateItemProcessor())
+                .processor(logUpdateItemProcessor(null)) // 파라미터 사용하는 곳에 null 넣기
                 .writer(logUpdateItemWriter())
                 .build();
     }
@@ -77,10 +79,11 @@ public class LogUpdateJobConfig {
      * @return 로그 수정 ItemProcessor
      */
     @Bean
-    public ItemProcessor<LogEntity, LogEntity> logUpdateItemProcessor() {
+    @StepScope // 파라미터 사용을 위해 StepScope 추가
+    public ItemProcessor<LogEntity, LogEntity> logUpdateItemProcessor(@Value("#{jobParameters[contents]}") String contents) {
         // reader에서 넘겨준 객체를 1개 단위로 처리 (한 번에 chunkSize 만큼 수행)
         return logEntity -> {
-            logEntity.updateContents("updateContents");
+            logEntity.updateContents(contents); // 파라미터 값을 가져와 활용
             return logEntity;
         };
     }
