@@ -1,4 +1,4 @@
-package com.quartz.entity;
+package com.transactional.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,6 +10,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "log")
+@Setter
 public class LogEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

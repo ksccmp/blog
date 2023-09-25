@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/360'>[SpringBoot] @Transactional 사용 방식 정리</a>
