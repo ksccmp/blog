@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/361'>[React] Jest로 테스트할 때 비동기 처리하기</a>
