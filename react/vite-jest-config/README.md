@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/362'>[React] Vite 타입 스크립트 프로젝트에 Jest 사용 환경 설정</a>
