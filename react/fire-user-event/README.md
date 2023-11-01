@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/369'>[React] Jest 이벤트 처리 비교, fireEvent vs userEvent</a>
