@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/370'>[React] Jest Query 사용 방법 비교, render vs screen</a>
