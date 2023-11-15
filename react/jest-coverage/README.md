@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/372'>[React] Jest로 테스트 커버리지 확인하기 (1) - 개념과 설정 방법</a>
