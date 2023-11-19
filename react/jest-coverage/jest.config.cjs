@@ -56,5 +56,5 @@ module.exports = {
     },
 
     // coverage에 기본적으로 담지 않는 파일들도 coverage 대상에 추가되도록 설정 (ex, 테스트 파일)
-    forceCoverageMatch: ['**/*.test.{ts,tsx}'],
+    // forceCoverageMatch: ['**/*.test.{ts,tsx}'],
 };
