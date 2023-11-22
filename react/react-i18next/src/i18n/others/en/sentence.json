@@ -1,0 +1,4 @@
+{
+    "sentenceHello": "Hello. This is others {{firstName}}{{lastName}}.",
+    "sentenceMarkup": "<bold>others Markup</bold>"
+}

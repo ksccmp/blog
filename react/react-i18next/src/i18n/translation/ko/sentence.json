@@ -1,0 +1,4 @@
+{
+    "sentenceHello": "안녕하세요. {{firstName}}{{lastName}}입니다.",
+    "sentenceMarkup": "<bold>마크업</bold>"
+}
