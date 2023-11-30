@@ -1,13 +1,15 @@
-import { useSuspenseQuery } from '@tanstack/react-query';
+// prev react-query-v5
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React from 'react';
 
 function Suspense() {
-    // if need to suspense, use SuspenseQuery
-    const res = useSuspenseQuery<string[]>({
+    // if need to suspense, set suspense option
+    const res = useQuery<string[]>({
         queryKey: ['strings'],
         queryFn: async () => (await axios.get('http://localhost:8080/strings')).data,
-        // removed suspense option
+        // suspense set true
+        suspense: true,
     });
 
     return (
