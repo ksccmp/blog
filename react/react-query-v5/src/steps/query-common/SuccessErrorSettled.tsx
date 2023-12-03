@@ -1,16 +1,22 @@
+// react-query-v5
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-export default function RefetchInterval() {
+export default function SuccessErrorSettled() {
     const res = useQuery<string[]>({
         queryKey: ['strings'],
         queryFn: async () => (await axios.get('http://localhost:8080/strings')).data,
 
-        // data removed, query can also check data
-        refetchInterval: (query) => {
-            console.log(query.state.data);
-            return 10000;
-        },
+        // if use onSuccess, onError, onSettled, occur error !
+        // onSuccess: () => {
+        //     console.log('onSuccess!');
+        // },
+        // onError: () => {
+        //     console.log('onError!');
+        // },
+        // onSettled: () => {
+        //     console.log('onSettled!');
+        // },
     });
 
     return (

@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import KeepPreviousData from './steps/query-common/KeepPreviousData';
+import IsDataEqual from './steps/query-common/IsDataEqual';
 
 export default function App() {
     const queryClient = new QueryClient();
 
     return (
         <QueryClientProvider client={queryClient}>
-            <KeepPreviousData />
+            <IsDataEqual />
         </QueryClientProvider>
     );
 }
