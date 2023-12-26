@@ -1,8 +1,12 @@
+import Button from '@/components/molecules/button/Button';
+
 export default function RootPage() {
     return (
-        <main>
+        <main className="m-4">
             <div>
-                <h2>Init</h2>
+                <Button type="submit" color="primary" size="medium">
+                    Page Button
+                </Button>
             </div>
         </main>
     );
