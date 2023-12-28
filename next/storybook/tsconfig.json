@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".", // 파일 찾는 기본 url의 시작점을 tsconfig.json의 위치와 동일 위치로 설정
     "plugins": [
       {
         "name": "next"
