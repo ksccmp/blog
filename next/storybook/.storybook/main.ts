@@ -10,6 +10,7 @@ const config: StorybookConfig = {
         '@storybook/addon-essentials', // storybook 초기 사용에 도움이 되는 third-party 기능 제공
         '@storybook/addon-onboarding', // storybook 초기 사용에 도움이 될 수 있는 가이드 기능 제공
         '@storybook/addon-interactions', // storybook에서 렌더링 이후 user interaction이 가능하도록 기능 제공
+        '@storybook/addon-designs', // storybook에 design 속성 기능 제공 (figma 등 활용 가능)
     ],
 
     // storybook에서 사용되는 framework 구체화를 위한 설정
