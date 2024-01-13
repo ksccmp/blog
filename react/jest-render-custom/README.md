@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/390'>[React] Jest에서 render 커스텀하여 전역 wrapper 설정하기</a>
