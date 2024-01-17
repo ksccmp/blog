@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/391'>[React] Jest에서 path alias 적용하기</a>
