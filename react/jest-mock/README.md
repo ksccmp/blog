@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/392'>[React] Jest에서 호출되는 함수 mocking 하기</a>
