@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/393'>[SpringBoot] 3 버전 이후 gradle에 querydsl 사용 환경 설정하기</a>
