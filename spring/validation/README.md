@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/395'>[SpringBoot] Spring Validation을 이용한 유효성 검증하기</a>
