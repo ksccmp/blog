@@ -26,5 +26,5 @@ import java.lang.annotation.*;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 // querydsl 사용을 위한 설정 파일 import
 @Import(QuerydslTestConfig.class)
-public @interface RepositoryAnnotation {
+public @interface RepositoryTest {
 }
