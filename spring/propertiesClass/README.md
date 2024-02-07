@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/399'>[SpringBoot] properties에 담긴 환경 변수를 클래스로 사용하기</a>
