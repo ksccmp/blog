@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/402'>[SpringBoot] Spring Security를 이용하여 인증/인가 처리하기 (3) - API와 JWT Token에 활용하기</a>
