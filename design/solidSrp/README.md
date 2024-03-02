@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/403'>[객체지향설계] SOLID 설계 원칙 (1) - SRP (단일 책임 원칙)</a>
