@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/404'>[객체지향설계] SOLID 설계 원칙 (2) - OCP (개방 폐쇄 원칙)</a>
