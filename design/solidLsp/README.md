@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/405'>[객체지향설계] SOLID 설계 원칙 (3) - LSP (리스코프 치환 원칙)</a>
