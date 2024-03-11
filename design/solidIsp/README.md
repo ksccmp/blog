@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/406'>[객체지향설계] SOLID 설계 원칙 (4) - ISP (인터페이스 분리 원칙)</a>
