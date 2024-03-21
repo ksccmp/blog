@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/407'>[객체지향설계] SOLID 설계 원칙 (5) - DIP (의존성 역전 원칙)</a>
