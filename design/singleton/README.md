@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/409'>[디자인패턴] 싱글톤(Singleton) 패턴 이해하기</a>
