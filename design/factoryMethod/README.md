@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/411'>[디자인패턴] 팩토리 메서드(Factory Method) 패턴 이해하기</a>
