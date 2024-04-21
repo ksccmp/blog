@@ -1,8 +1,6 @@
 package com.jforj.singleton.billpugh;
 
 public class BillPughSingleton {
-    private static BillPughSingleton instance; // 클래스의 유일한 인스턴스 객체
-
     /**
      * 클래수 내부에서만 생성자를 호출할 수 있도록 private 설정
      */
