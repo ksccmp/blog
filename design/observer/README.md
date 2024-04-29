@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/414'>[디자인패턴] 옵저버(Observer) 패턴 이해하기</a>
