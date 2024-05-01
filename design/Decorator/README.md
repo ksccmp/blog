@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/415'>[디자인패턴] 데코레이터(Decorator) 패턴 이해하기</a>
