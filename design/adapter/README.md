@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/416'>[디자인패턴] 어댑터(Adapter) 패턴 이해하기</a>
