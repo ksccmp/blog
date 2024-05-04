@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/417'>[SpringBoot] Thread Local을 이용하여 Thread 별 독립적으로 변수 관리하기</a>
