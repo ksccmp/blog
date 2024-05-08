@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/420'>[React] SSE (Server-Sent Events) 사용하여 실시간 통신하기</a>
