@@ -14,6 +14,11 @@ public class BrowserComponent {
                 break;
             }
 
+            case "safari": {
+                System.out.println("safari button create");
+                break;
+            }
+
             default: {
                 System.out.println("do not create button");
             }
@@ -29,6 +34,11 @@ public class BrowserComponent {
 
             case "edge": {
                 System.out.println("edge text field create");
+                break;
+            }
+
+            case "safari": {
+                System.out.println("safari text field create");
                 break;
             }
 

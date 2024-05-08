@@ -1,4 +1,4 @@
-package com.jforj.abstractfactory.after;
+package com.jforj.abstractfactory.after.button;
 
 public class EdgeButton implements BrowserButton {
 

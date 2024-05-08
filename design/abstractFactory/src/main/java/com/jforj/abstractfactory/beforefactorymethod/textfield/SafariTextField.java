@@ -1,9 +1,9 @@
 package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public class EdgeTextField implements BrowserTextField {
+public class SafariTextField implements BrowserTextField {
 
     @Override
     public void print() {
-        System.out.println("edge text field create");
+        System.out.println("safari text field create");
     }
 }

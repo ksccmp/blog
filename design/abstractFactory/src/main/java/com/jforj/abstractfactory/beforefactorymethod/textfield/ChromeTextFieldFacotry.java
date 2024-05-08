@@ -1,9 +1,9 @@
-package com.jforj.abstractfactory.beforefactorymethod.button;
+package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public class ChromeButonFacotry implements BrowserButtonFactory {
+public class ChromeTextFieldFacotry implements BrowserTextFieldFactory {
 
     @Override
-    public BrowserButton createBrowserButton() {
-        return new ChromeButton();
+    public BrowserTextField createTextField() {
+        return new ChromeTextField();
     }
 }

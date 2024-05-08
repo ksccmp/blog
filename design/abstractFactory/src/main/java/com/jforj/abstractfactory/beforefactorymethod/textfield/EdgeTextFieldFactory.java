@@ -1,9 +1,9 @@
-package com.jforj.abstractfactory.beforefactorymethod.button;
+package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public class EdgeButtonFactory implements BrowserButtonFactory {
+public class EdgeTextFieldFactory implements BrowserTextFieldFactory {
 
     @Override
-    public BrowserButton createBrowserButton() {
-        return new EdgeButton();
+    public BrowserTextField createTextField() {
+        return new EdgeTextField();
     }
 }

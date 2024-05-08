@@ -1,6 +1,6 @@
-package com.jforj.abstractfactory.beforefactorymethod.button;
+package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public interface BrowserButton {
+public interface BrowserTextField {
 
     void print();
 }

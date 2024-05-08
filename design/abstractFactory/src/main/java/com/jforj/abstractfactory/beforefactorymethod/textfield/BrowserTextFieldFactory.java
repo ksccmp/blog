@@ -1,13 +1,10 @@
-package com.jforj.abstractfactory.beforefactorymethod.button;
+package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public interface BrowserButtonFactory {
+public interface BrowserTextFieldFactory {
 
-    default BrowserButton getInstance() {
-        BrowserButton browserButton = createBrowserButton();
-        browserButton.print();
-
-        return browserButton;
+    default BrowserTextField getInstance() {
+        return createTextField();
     }
 
-    BrowserButton createBrowserButton();
+    BrowserTextField createTextField();
 }

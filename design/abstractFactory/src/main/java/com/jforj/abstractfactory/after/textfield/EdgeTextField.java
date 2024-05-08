@@ -1,4 +1,4 @@
-package com.jforj.abstractfactory.after;
+package com.jforj.abstractfactory.after.textfield;
 
 public class EdgeTextField implements BrowserTextField {
 

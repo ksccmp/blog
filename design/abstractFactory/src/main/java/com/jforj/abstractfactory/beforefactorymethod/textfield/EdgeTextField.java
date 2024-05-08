@@ -1,9 +1,9 @@
-package com.jforj.abstractfactory.beforefactorymethod.button;
+package com.jforj.abstractfactory.beforefactorymethod.textfield;
 
-public class EdgeButton implements BrowserButton {
+public class EdgeTextField implements BrowserTextField {
 
     @Override
     public void print() {
-        System.out.println("edge button create");
+        System.out.println("edge text field create");
     }
 }

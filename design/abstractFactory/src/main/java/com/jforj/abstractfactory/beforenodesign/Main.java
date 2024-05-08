@@ -13,5 +13,10 @@ public class Main {
         String edgeType = "edge";
         browserComponent.createButton(edgeType);
         browserComponent.createTextField(edgeType);
+
+        // safari
+        String safariType = "safari";
+        browserComponent.createButton(safariType);
+        browserComponent.createTextField(safariType);
     }
 }

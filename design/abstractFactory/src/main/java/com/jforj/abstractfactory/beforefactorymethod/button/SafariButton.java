@@ -1,9 +1,9 @@
 package com.jforj.abstractfactory.beforefactorymethod.button;
 
-public class EdgeButton implements BrowserButton {
+public class SafariButton implements BrowserButton {
 
     @Override
     public void print() {
-        System.out.println("edge button create");
+        System.out.println("safari button create");
     }
 }

@@ -1,2 +1,6 @@
-package com.jforj.abstractfactory.beforefactorymethod;public interface BrowserButton {
+package com.jforj.abstractfactory.beforefactorymethod.button;
+
+public interface BrowserButton {
+
+    void print();
 }
