@@ -1,2 +1,7 @@
-package com.jforj.rediscachemanager.repository;public interface UserJpaRepository {
+package com.jforj.rediscachemanager.repository;
+
+import com.jforj.rediscachemanager.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserJpaRepository extends JpaRepository<User, String> {
 }
