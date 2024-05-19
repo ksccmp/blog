@@ -1,0 +1,1 @@
+* 소스코드 관련 설명 → <a href='https://jforj.tistory.com/426'>[SpringBoot] Shedlock을 이용하여 분산 환경 배치 처리하기</a>
